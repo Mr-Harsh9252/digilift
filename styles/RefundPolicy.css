@@ -1,0 +1,312 @@
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.page-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Main Content */
+.refund-policy-section {
+  padding: 60px 20px;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.policy-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid rgba(163,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.policy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.policy-card h2 {
+  color: var(--purple);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(163,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.policy-card h2 i {
+  color: var(--purple-dark);
+  font-size: 1.5rem;
+}
+
+.policy-card > p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.policy-item {
+  background: rgba(163,0,0,0.03);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--purple);
+}
+
+.policy-item h3 {
+  color: var(--purple-dark);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.policy-item h3 i {
+  color: var(--purple);
+  font-size: 1.1rem;
+}
+
+.policy-item p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Requirements List */
+.requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.requirements-list li {
+  background: rgba(163,0,0,0.05);
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 3px solid var(--purple);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.requirements-list li:hover {
+  background: rgba(163,0,0,0.08);
+  transform: translateX(5px);
+}
+
+.requirements-list li i {
+  color: var(--purple);
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+/* Email Link */
+.email-link {
+  color: var(--purple);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: var(--purple-dark);
+}
+
+/* Contact CTA */
+.contact-cta {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  border-radius: var(--radius);
+  margin-top: 40px;
+}
+
+.contact-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.contact-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: white;
+  color: var(--purple);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-btn:hover {
+  background: #f8f8f8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 60px 20px 40px;
+  }
+  
+  .page-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .page-header p {
+    font-size: 1rem;
+  }
+  
+  .policy-card {
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .policy-card h2 {
+    font-size: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .policy-item {
+    padding: 20px;
+  }
+  
+  .policy-item h3 {
+    font-size: 1.2rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .requirements-list li {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .contact-cta h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .policy-card {
+    padding: 20px;
+  }
+  
+  .policy-card h2 {
+    font-size: 1.3rem;
+  }
+  
+  .policy-item {
+    padding: 15px;
+  }
+  
+  .contact-cta {
+    padding: 30px 20px;
+  }
+}
